@@ -1,0 +1,6 @@
+2015/04/07
+    started project
+    determined program structure
+    implemented database querying
+    implemented settings loading
+    implemented tile insertion
