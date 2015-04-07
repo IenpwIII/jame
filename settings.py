@@ -1,5 +1,15 @@
 import ConfigParser
 
+#load a config file
+def load(self,cfile):
+    dict1 = {}
+    config = ConfigParser.ConfigParser()
+    config.read(cfile)
+    sections = config.sections()
+    for i in sections:
+        dict1[i] = sectionMap(self,config,i)
+    return dict1
+
 #load a section from the config file
 def sectionMap(self,config,section):
     dict1 = {}
@@ -12,14 +22,4 @@ def sectionMap(self,config,section):
         except:
             print("exception on %s!" % option)
             dict1[option] = None
-    return dict1
-
-#load a config file
-def load(self,cfile):
-    dict1 = {}
-    config = ConfigParser.ConfigParser()
-    config.read(cfile)
-    sections = config.sections()
-    for i in sections:
-        dict1[i] = sectionMap(self,config,i)
     return dict1
