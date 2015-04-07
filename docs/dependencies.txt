@@ -1,0 +1,2 @@
+Python 2.7
+MySQPdb 1.2.5
